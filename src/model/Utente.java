@@ -29,5 +29,13 @@ public class Utente {
         return this.getPassword().equals(password);
     }
 
+    @Override
+    public boolean equals(Object obj) {
+        if (obj instanceof Utente) {
+            Utente utente = (Utente) obj;
+            return this.getUsername().equals(utente.getUsername());
+        }
+        return false;
+    }
 
 }
